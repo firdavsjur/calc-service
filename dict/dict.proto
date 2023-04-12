@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package dict;
+
+option go_package = "app/dict";
+
+service CalcService {
+
+    rpc Add(twoNumber) returns (resultTwoNumber) {}
+    rpc Sub(twoNumber) returns (resultTwoNumber) {}
+    rpc Mult(twoNumber) returns (resultTwoNumber) {}
+    rpc Div(twoNumber) returns (resultTwoNumber) {}
+    rpc Sqrt(sqrtNum) returns (resultTwoNumber) {}
+    rpc Pow(twoNumber) returns (resultTwoNumber) {}
+    rpc Min(twoNumber) returns (resultTwoNumber) {}
+}
+
+
+
+message twoNumber {
+    int32 a = 1;
+    int32 b= 2;
+}
+message resultTwoNumber{
+    int32 result = 1;
+}
+message sqrtNum {
+    int32 num = 1;
+}
